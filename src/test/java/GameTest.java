@@ -9,8 +9,8 @@ public class GameTest {
         Player playerTwo = new Player(2, "Stone", 1);
 
         Game game = new Game();
-        game.register(playerOne);
-        game.register(playerTwo);
+        game.addPlayer("Smut", playerOne);
+        game.addPlayer("Stone", playerTwo);
 
         Assertions.assertThrows(NotRegisteredException.class, () -> {
             game.round("Smit", "Stone");
@@ -23,8 +23,8 @@ public class GameTest {
         Player playerTwo = new Player(2, "Stone", 1);
 
         Game game = new Game();
-        game.register(playerOne);
-        game.register(playerTwo);
+        game.addPlayer("Smut", playerOne);
+        game.addPlayer("Stone", playerTwo);
 
         Assertions.assertThrows(NotRegisteredException.class, () -> {
             game.round("Smut", "Stine");
@@ -37,8 +37,8 @@ public class GameTest {
         Player playerTwo = new Player(2, "Stone", 1);
 
         Game game = new Game();
-        game.register(playerOne);
-        game.register(playerTwo);
+        game.addPlayer("Smut", playerOne);
+        game.addPlayer("Stone", playerTwo);
 
         Assertions.assertEquals(1, game.round("Smut", "Stone"));
     }
@@ -49,8 +49,8 @@ public class GameTest {
         Player playerTwo = new Player(2, "Stone", 3);
 
         Game game = new Game();
-        game.register(playerOne);
-        game.register(playerTwo);
+        game.addPlayer("Smut", playerOne);
+        game.addPlayer("Stone", playerTwo);
 
         Assertions.assertEquals(2, game.round("Smut", "Stone"));
     }
@@ -61,8 +61,8 @@ public class GameTest {
         Player playerTwo = new Player(2, "Stone", 1);
 
         Game game = new Game();
-        game.register(playerOne);
-        game.register(playerTwo);
+        game.addPlayer("Smut", playerOne);
+        game.addPlayer("Stone", playerTwo);
 
         Assertions.assertEquals(0, game.round("Smut", "Stone"));
     }
